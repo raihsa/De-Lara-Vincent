@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sun Son Solar</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #73abdd;
+            margin: 0;
+        }
+
+        header {
+            background: rgb(224, 224, 224);
+            padding: 20px 8%;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            display: flex;
+            gap: 50px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .form {
+            width: 50%;
+        }
+
+        h1 {
+            color: #080808;
+        }
+
+        p {
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            margin: 7px 0;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .terms {
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .terms input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #76b852;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .login a {
+            color: #0b1014;
+        }
+
+        .photo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    SUN SON SOLAR
+</header>
+
+<div class="container">
+
+    <div class="form">
+
+        <h1>Create an Account</h1>
+
+        <p>Fill in the details to get started.</p>
+
+        <form onsubmit="register(event)">
+
+            <input type="text"
+                   placeholder="Full Name"
+                   required>
+
+            <input type="email"
+                   placeholder="Email"
+                   required>
+
+            <input type="text"
+                   placeholder="Phone Number"
+                   required>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Password"
+                   required>
+
+            <input type="password"
+                   id="confirm"
+                   placeholder="Confirm Password"
+                   required>
+
+            <div class="terms">
+                <input type="checkbox" required>
+                I agree to the Terms and Conditions
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <div class="login">
+            <p>
+                Already have an account?
+                <a href="#">Login here</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="photo">
+        <img src="C:\Users\IT3E\Downloads\solar.jpg">
+    </div>
+
+</div>
+
+<script>
+
+function register(event) {
+
+    event.preventDefault();
+
+    let password =
+        document.getElementById("password").value;
+
+    let confirm =
+        document.getElementById("confirm").value;
+
+    if (password != confirm) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    alert("Registration successful!");
+}
+
+</script>
+
+</body>
+</html>
